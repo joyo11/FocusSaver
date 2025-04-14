@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Focus Saver Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h2>Focus Saver</h2>
+                <img src="icons/icon48.png" alt="Focus Saver">
+                <button class="close-button" id="closeButton">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L8 6.29289L3.85355 2.14645C3.65829 1.95118 3.34171 1.95118 3.14645 2.14645C2.95118 2.34171 2.95118 2.65829 3.14645 2.85355L7.29289 7L3.14645 11.1464C2.95118 11.3417 2.95118 11.6583 3.14645 11.8536C3.34171 12.0488 3.65829 12.0488 3.85355 11.8536L8 7.70711L12.1464 11.8536C12.3417 12.0488 12.6583 12.0488 12.8536 11.8536C13.0488 11.6583 13.0488 11.3417 12.8536 11.1464L8.70711 7L12.8536 2.85355Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <p class="subtitle">Skip irrelevant parts, focus on what matters.</p>
+        </div>
+
+        <div class="settings-container">
+            <div class="setting-group">
+                <div class="setting-header">
+                    <h2>Main Settings</h2>
+                </div>
+                
+                <label class="toggle-switch">
+                    <input type="checkbox" id="enabled" checked="false">
+                    <span class="slider"></span>
+                    <div class="setting-info">
+                        <span class="setting-title">Enable Focus Saver</span>
+                        <span class="setting-description">Turn the extension on/off</span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="setting-group">
+                <div class="setting-header">
+                    <h2>Skip Options</h2>
+                </div>
+
+                <label class="toggle-switch">
+                    <input type="checkbox" id="skipIntros" checked="false">
+                    <span class="slider"></span>
+                    <div class="setting-info">
+                        <span class="setting-title">Skip Intros</span>
+                        <span class="setting-description">Automatically skip video introductions</span>
+                    </div>
+                </label>
+
+                <label class="toggle-switch">
+                    <input type="checkbox" id="skipOutros" checked="false">
+                    <span class="slider"></span>
+                    <div class="setting-info">
+                        <span class="setting-title">Skip Outros</span>
+                        <span class="setting-description">Skip end-of-video segments</span>
+                    </div>
+                </label>
+
+                <label class="toggle-switch">
+                    <input type="checkbox" id="skipAds" checked="false">
+                    <span class="slider"></span>
+                    <div class="setting-info">
+                        <span class="setting-title">Skip Sponsored Segments</span>
+                        <span class="setting-description">Skip in-video advertisements</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="save-section">
+            <button id="saveButton" class="save-button">
+                <span class="button-text">Click to see the magic</span>
+                <div class="loader"></div>
+            </button>
+        </div>
+
+        <div class="footer">
+            <div id="status" class="status"></div>
+        </div>
+    </div>
+    <div class="fullscreen-loader">
+        <div class="loader-spinner"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 
