@@ -5,11 +5,9 @@ const DEFAULT_SETTINGS = {
     skipOutros: false,
     skipAds: false
 };
-
 let hasChanges = false;
 let isFirstTime = true;
-
-// Function to update skip options state
+// Function to update the skip options state
 function updateSkipOptionsState(enabled) {
     const skipOptions = ['skipIntros', 'skipOutros', 'skipAds'];
     skipOptions.forEach(option => {
