@@ -1,10 +1,10 @@
-// Regular expression to match timestamps in the format "HH:MM:SS" or "MM:SS" with descriptions
+// Regular expression to match timestamps in format "HH:MM:SS" or "MM:SS" with descriptions
     const TIMESTAMP_REGEX = /(?:(\d{1,2}):)?(\d{1,2}):(\d{2})(?:\s*[-–—]\s*|\s+)(.*?)(?=(?:\d{1,2}:)?\d{1,2}:\d{2}|$)/g;
 
-// Minimum video duration (in seconds) for skipping to be enabled
+// Minimum video durationw (in seconds) for skipping to be enabled
     const MIN_VIDEO_DURATION = 60; // Minimum video duration in seconds to enable skipping
 
-// Default skip percentages when no timestamps available
+// Default skip percentage when no timestamps available
 const DEFAULT_INTRO_PERCENTAGE = 0.08; // 8%
 const DEFAULT_OUTRO_PERCENTAGE = 0.05; // 5%
 
@@ -13,7 +13,7 @@ const DEFAULT_OUTRO_PERCENTAGE = 0.05; // 5%
     let lastSkipTime = 0;
     const SKIP_COOLDOWN = 2000; // 2 seconds cooldown between skips
 
-// Function to convert timestamp string to seconds
+// Function to convert timestamp stringw to seconds
 function timestampToSeconds(timestamp) {
     const parts = timestamp.split(':').reverse();
     let seconds = 0;
@@ -56,7 +56,7 @@ function timestampToSeconds(timestamp) {
                 // Continue instead of returning to ensure skips work properly
             }
             
-            // Don't skip if video is too short
+            // Don't skip if the video is too short
             if (duration < MIN_VIDEO_DURATION) {
                 console.log('Focus Saver: Video too short, skipping disabled');
                 return;
@@ -75,7 +75,7 @@ function timestampToSeconds(timestamp) {
         }
     }
 
-    // Function to check if a description is an intro
+    // Function to check if a description is an introduction
     function isIntro(description) {
         if (!description) return false;
         
