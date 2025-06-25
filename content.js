@@ -771,7 +771,6 @@ function initialize() {
             });
         }, 500);
 }
-
 // Set up MutationObserver to handle dynamic content loading
 const observer = new MutationObserver((mutationsList, observer) => {
     // First check if extension is enabled
