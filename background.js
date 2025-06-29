@@ -7,7 +7,6 @@ chrome.runtime.onInstalled.addListener(() => {
         enabled: true
     });
 });
-
 // Listen for messages from content script
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === 'getSettings') {
